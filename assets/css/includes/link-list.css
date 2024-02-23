@@ -1,0 +1,9 @@
+.link-list-section {
+}
+.link-list-section ul {
+	column-width: 10em;
+}
+.link-list li {
+	break-inside: avoid-column;
+	padding: 0.5rem 0;
+}

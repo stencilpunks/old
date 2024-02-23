@@ -1,0 +1,7 @@
+.stencil-link-list {
+	column-width: 10em;
+}
+.stencil-link-list li {
+	break-inside: avoid-column;
+	padding: 0.5rem 0;
+}

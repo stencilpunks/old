@@ -1,0 +1,13 @@
+---
+layout: base.liquid
+title: Stencil Punks
+description: Stencil Punks is a non commercial online community devoted to the do it yourself ethic.
+---
+<h1>Misc</h1>
+<ul>
+  {%- for post in collections.misc -%}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+  {%- endfor -%}
+</ul>

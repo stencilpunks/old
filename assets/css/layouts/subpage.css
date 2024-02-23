@@ -1,0 +1,16 @@
+.stencil-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.stencil-list img {
+	width: 14rem;
+	height: 14rem;
+	object-fit: contain;
+}
+.subpage-links {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+}

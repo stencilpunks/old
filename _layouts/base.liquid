@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="page-{{ page.fileSlug }}" data-nav-state="closed">
+  <head>
+    <!-- Base meta tags -->
+    <meta charset="UTF-8">
+    <title>
+      {{ title }}
+      | Stencil Punks
+    </title>
+    <meta name="language" content="english">
+    <meta name="description" content="{{ description | default: site.defaultDescription }}">
+    <meta name="view-transition" content="same-origin">
+
+    <!-- Reassure the browser that we are mobile-friendly -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+
+    <!-- OpenGraph -->
+    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:site_name" content="Stencil Punks">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }} | Stencil Punks">
+    <meta property="og:description" content="{{ description | default: site.defaultDescription }}">
+    <meta property="og:image" content="{{ site.url }}/assets/img/og.png">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicon/favicon.ico">
+    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/favicon/favicon-apple.png">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body class="layout">
+    <nav class="layout-nav">
+      {% render 'nav' %}
+    </nav>
+    <main class="layout-content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+    <script type="module" defer src="/assets/js/script.js"></script>
+  </body>
+</html>

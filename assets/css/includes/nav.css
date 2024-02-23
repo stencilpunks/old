@@ -1,0 +1,116 @@
+.nav {
+	position: sticky;
+	top: 0;
+	--nav-toggle-size: 3rem;
+	--mobile-nav-height: 5rem;
+	font-family: var(--font-display);
+	padding: 1rem;
+	background: url('../../img/bricks.jpg');
+	background-size: 100% auto;
+	background-repeat: repeat-y;
+}
+
+.nav-header {
+	height: var(--mobile-nav-height);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-logo img {
+	width: 8rem;
+	height: auto;
+	mix-blend-mode: screen;
+}
+
+.nav-toggle {
+	all: unset;
+	box-sizing: border-box;
+	width: var(--nav-toggle-size);
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
+}
+
+.nav-toggle .title {
+	text-align: center;
+	font-size: calc(var(--nav-toggle-size) / 3);
+}
+.nav-toggle .icon {
+	font-size: var(--nav-toggle-size);
+	width: var(--nav-toggle-size);
+	height: var(--nav-toggle-size);
+	text-align: center;
+}
+.nav-toggle .open {
+	line-height: 1;
+	display: none;
+}
+[data-nav-state='open'] .nav-toggle .open {
+	display: block;
+}
+.nav-toggle .closed {
+	line-height: 0.25;
+	display: block;
+}
+
+[data-nav-state='open'] .nav-toggle .closed {
+	display: none;
+}
+
+.nav-list {
+	height: 0;
+	overflow: hidden;
+}
+[data-nav-state='open'] .nav-list {
+	height: auto;
+}
+.nav-list li {
+	width: max-content;
+}
+.nav-list a {
+	font-family: var(--font-display);
+	letter-spacing: 0.1em;
+	font-weight: 400;
+	font-size: 2.5rem;
+	line-height: 1.2;
+	text-decoration: none;
+	color: white;
+	text-shadow: 0 0 0.5em black, 0 0 0.25em black, 0 0 0.1em black;
+}
+.nav-list a:hover,
+.nav-list a:focus {
+	color: var(--color-link-hover);
+}
+
+.nav-list li:nth-child(1n) {
+	transform: rotate(2deg);
+}
+.nav-list li:nth-child(2n) {
+	transform: rotate(-2deg);
+}
+.nav-list li:nth-child(3n) {
+	transform: rotate(2deg);
+}
+.nav-list li:nth-child(4n) {
+	transform: rotate(-5deg);
+}
+.nav-list li:nth-child(5n) {
+	transform: rotate(-2deg);
+}
+
+@media screen and (min-width: 640px) {
+	.nav-header {
+		height: unset;
+	}
+	.nav-logo img {
+		width: 100%;
+	}
+	.nav-toggle {
+		display: none;
+	}
+	.nav-list {
+		height: auto;
+	}
+}

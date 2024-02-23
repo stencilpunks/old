@@ -1,0 +1,20 @@
+{
+	"name": "thisanimus-test",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "npx @11ty/eleventy --serve --incremental --quiet"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@11ty/eleventy": "3.0.0-alpha.4",
+		"dotenv": "latest"
+	},
+	"engines": {
+		"node": ">=18.0.0 <=20.x.x"
+	}
+}

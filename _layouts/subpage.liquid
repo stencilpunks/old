@@ -1,0 +1,28 @@
+---
+layout: 'base.liquid'
+---
+<header>
+  <h1>{{ title }}</h1>
+  {%- if links.size > 0 -%}
+    <div class="subpage-links">
+      <h2 class="subtitle">Links:</h2>
+      {%- for link in links -%}
+        <a href="{{ link.href }}">{{ link.title }}</a>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</header>
+
+{%- if stencils.size > 0 -%}
+  <hr>
+  <h2 class="subtitle">Stencils:</h2>
+  <ul class="stencil-list">
+    {%- for stencil in stencils -%}
+      <li>
+        <a href="/assets/img/stencils/{{ stencil }}" download>
+          <img src="/assets/img/stencils/{{ stencil }}">
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

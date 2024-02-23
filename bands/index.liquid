@@ -1,0 +1,13 @@
+---
+layout: base.liquid
+title: Stencil Punks
+description: Stencil Punks is a non commercial online community devoted to the do it yourself ethic.
+---
+<h1>Bands</h1>
+<ul>
+  {%- for band in collections.bands -%}
+    <li>
+      <a href="{{ band.url }}">{{ band.data.title }}</a>
+    </li>
+  {%- endfor -%}
+</ul>

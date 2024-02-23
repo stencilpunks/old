@@ -1,0 +1,165 @@
+@font-face {
+	font-family: 'Boycott';
+	src: url('../../font/boycott.woff2') format('woff2');
+	font-weight: 800;
+	font-style: normal;
+	font-display: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-display);
+	overflow-wrap: break-word;
+	line-height: 1.1;
+	margin: 0 0 1rem 0;
+}
+
+h1 {
+	font-size: 3rem;
+	line-height: 1;
+}
+h2 {
+	font-size: 2rem;
+	position: relative;
+}
+h3 {
+	font-size: 1.5rem;
+}
+h4 {
+	font-size: 1.25rem;
+}
+h5 {
+	font-size: 1rem;
+}
+h6 {
+	font-size: 0.9rem;
+}
+
+p {
+	overflow-wrap: break-word;
+	margin: 0 0 0.75em 0;
+	max-width: 80ch;
+}
+
+em {
+	font-style: italic;
+}
+
+a {
+	text-decoration-style: dashed;
+	color: var(--color-link-default);
+}
+a:where(:hover, :focus) {
+	color: var(--color-link-hover);
+	text-decoration-style: solid;
+}
+a:visited {
+	color: var(--color-link-visited);
+}
+
+:where(p, ul:not([class]), ol:not([class]), pre, code, blockquote, img, video, iframe) + :is(h1, h2, h3, h4, h5, h6) {
+	margin-top: 2rem;
+}
+mark {
+	background: #fff176;
+}
+
+address {
+	font-style: normal;
+}
+
+.hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+ul,
+ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul:not([class]) {
+	list-style-type: disc;
+	margin: 0 0 1rem 1.125rem;
+	margin-left: 1.125rem;
+	line-height: 1.3;
+}
+ul:not([class]) > li > ul {
+	list-style-type: circle;
+}
+ul:not([class]) > li > ul > li > ul {
+	list-style-type: square;
+}
+ol:not([class]) {
+	margin: 0 0 1rem 1.75rem;
+	padding-left: 0;
+	list-style: decimal;
+}
+:where(ul:not([class]), ol:not([class])) > li {
+	padding-left: 0rem;
+	margin-bottom: 0.5rem;
+}
+
+ul:not([class]) ul,
+ol:not([class]) ul {
+	margin: 1rem 0 1rem 1rem;
+}
+
+ul:not([class]) ol,
+ol:not([class]) ol {
+	margin: 1rem 0 1rem 2rem;
+}
+
+.subtitle {
+	font-size: 1rem;
+	margin: unset;
+}
+.text-display {
+	font-family: var(--font-display);
+}
+hr {
+	border: none;
+	border-top: var(--border-width) solid white;
+	margin: 2rem 0;
+	position: relative;
+	overflow: visible;
+}
+hr:before {
+	--splot-size: 1.5rem;
+	content: '';
+	position: absolute;
+	top: calc(-1 * var(--border-width));
+	left: 0;
+	background: url(../../img/spray-start.png);
+	background-size: var(--splot-size) var(--splot-size);
+	width: var(--splot-size);
+	height: var(--splot-size);
+}
+blockquote {
+	background: var(--color-background-intense);
+	border-left: var(--border-width) solid var(--color-ui);
+	padding: 1rem;
+	margin: 0 0 2rem 0;
+}
+blockquote:not(:first-child) {
+	margin: 2rem 0;
+}
+blockquote > :first-child {
+	padding-top: 0;
+	margin-top: 0;
+}
+blockquote > :last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}

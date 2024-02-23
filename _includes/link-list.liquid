@@ -1,0 +1,11 @@
+<section class="link-list-section">
+  <hr>
+  <h2>{{ title }}</h2>
+  <ul class="link-list">
+    {%- for post in posts -%}
+      <li>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>

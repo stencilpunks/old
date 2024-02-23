@@ -1,0 +1,15 @@
+details {
+	margin: 2rem 0;
+	font-size: 0.9rem;
+}
+summary {
+	cursor: pointer;
+	color: var(--color-link-default);
+	font-weight: 600;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+summary:hover,
+summary:focus {
+	color: var(--color-link-hover);
+}
