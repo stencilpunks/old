@@ -34,4 +34,13 @@ body {
 }
 .container {
 	max-width: 48rem;
+	margin: 0 auto;
+}
+.flex {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+.flex > p:only-child {
+	display: contents;
 }

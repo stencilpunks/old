@@ -26,3 +26,8 @@ layout: 'base.liquid'
     {%- endfor -%}
   </ul>
 {%- endif -%}
+{%- if content -%}
+  <hr>
+  <h2 class="subtitle">More:</h2>
+  {{ content }}
+{%- endif -%}
